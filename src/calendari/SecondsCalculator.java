@@ -43,7 +43,15 @@ public class SecondsCalculator
 
 			nSegonsTotal += nSegonsHora;
 		}
-		
+
+		// Saltem minuts
+		for (int iMinut = 0; iMinut<minut; ++iMinut)
+		{
+			int nSegonsMinut = 60;
+
+			nSegonsTotal += nSegonsMinut;
+		}
+
 		return nSegonsTotal;
 	}
 	
