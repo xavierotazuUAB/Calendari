@@ -43,5 +43,10 @@ class SecondsCalculatorTest
 		assertFalse(calc.getIsAnyTraspas(1982));
 		assertFalse(calc.getIsAnyTraspas(1983));
 		assertTrue(calc.getIsAnyTraspas(1984));
-	}
+
+		// Multiples de 100, però no de 400
+		assertTrue(calc.getIsAnyTraspas(1900));
+		assertTrue(calc.getIsAnyTraspas(2100));
+		assertTrue(calc.getIsAnyTraspas(2200));
+}
 }
