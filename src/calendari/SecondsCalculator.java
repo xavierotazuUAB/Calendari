@@ -13,10 +13,12 @@ public class SecondsCalculator
 		{
 			bTraspas = true;
 			
+			// Multiple de 100
 			if(any%100==0)
 			{
 				bTraspas = false;
 				
+				// Multiple de 400
 				if(any%400==0)
 				{
 					bTraspas = true;
