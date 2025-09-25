@@ -36,12 +36,18 @@ class SecondsCalculatorTest
 		// Anys de traspas multiples de 4
 		assertEquals(calc.getDiesDelMes(2,1980), 29);
 		assertEquals(calc.getDiesDelMes(2,1984), 29);
+		assertEquals(calc.getDiesDelMes(1,1980), 31);
+		assertEquals(calc.getDiesDelMes(4,1980), 30);
 
 		// Anys de traspas multiples de 100
 		assertEquals(calc.getDiesDelMes(2,1900), 28);
+		assertEquals(calc.getDiesDelMes(1,1900), 31);
+		assertEquals(calc.getDiesDelMes(4,1900), 30);
 		
 		// Anys de traspas multiples de 400
 		assertEquals(calc.getDiesDelMes(2,2000), 29);
+		assertEquals(calc.getDiesDelMes(1,2000), 31);
+		assertEquals(calc.getDiesDelMes(4,2000), 30);
 	}
 
 	@Test
