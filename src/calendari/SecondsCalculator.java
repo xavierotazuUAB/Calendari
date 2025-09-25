@@ -29,7 +29,7 @@ public class SecondsCalculator
 		}
 
 		// Saltem dies, hores, minuts i segons
-		nSegonsTotal += (dia-1)*24*60*60 + hora*60*60 + minut*60 + seon;
+		nSegonsTotal += (dia-1)*24*60*60 + hora*60*60 + minut*60 + segon;
 
 
 		return nSegonsTotal;
