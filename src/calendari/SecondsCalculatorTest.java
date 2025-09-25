@@ -105,6 +105,8 @@ class SecondsCalculatorTest
 		
 		// Copiem algun dels casos anteriors i afegim dies
 		assertEquals(calc.SegonsFins(2,3,1982,0,0,0),(366+365+31+28+1)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(3,3,1982,0,0,0),(366+365+31+28+2)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(31,3,1982,0,0,0),(366+365+31+28+30)*lSegonsPerDia);
 
 
 	}
