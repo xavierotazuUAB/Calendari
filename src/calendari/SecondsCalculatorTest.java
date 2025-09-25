@@ -92,6 +92,8 @@ class SecondsCalculatorTest
 
 		// Saltem un mes exacte
 		assertEquals(calc.SegonsFins(1,2,1980,0,0,0),31*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(1,3,1980,0,0,0),(31+29)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(1,4,1980,0,0,0),(31+29+31)*lSegonsPerDia);
 	
 	}
 
