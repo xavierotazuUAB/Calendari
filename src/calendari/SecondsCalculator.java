@@ -36,6 +36,13 @@ public class SecondsCalculator
 			nSegonsTotal += nSegonsDia;
 		}
 
+		// Saltem hores
+		for (int iHora = 1; iHora<hora; ++iHora)
+		{
+			int nSegonsHora = 60*60;
+
+			nSegonsTotal += nSegonsHora;
+		}
 		
 		return nSegonsTotal;
 	}
