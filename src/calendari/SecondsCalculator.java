@@ -10,7 +10,9 @@ public class SecondsCalculator
 		
 		// Multiple de 4
 		if(any%4!=0)
+		{
 			bTraspas = true;
+		}
 		
 		return bTraspas;
 	}
@@ -26,4 +28,5 @@ public class SecondsCalculator
 	// Mètodes publics per poder fer testing
 	
 	public int getDiesDelMes(int mes, int any) {return DiesDelMes(mes,any);}
+	public boolean getIsAnyTraspas(int any) {return IsAnyTraspas(any);}
 }
