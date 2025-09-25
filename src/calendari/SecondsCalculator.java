@@ -18,7 +18,16 @@ public class SecondsCalculator
 			nSegonsAny = nDiesAny*24*60*60;
 			nSegonsTotal += nSegonsAny;
 		}
-		
+
+		// Saltem mesos sencers
+		for (int iMes = 1; iMes<mes; ++iMes)
+		{
+			int nDiesMes = DiesDelMes(iMes, any);
+			int nSegonsMes = nDiesMes*24*60*60;
+
+			nSegonsTotal += nSegonsMes;
+		}
+
 		return nSegonsTotal;
 	}
 	
