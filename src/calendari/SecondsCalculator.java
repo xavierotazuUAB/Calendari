@@ -29,31 +29,15 @@ public class SecondsCalculator
 		}
 
 		// Saltem dies
-		for (int iDia = 1; iDia<dia; ++iDia)
-		{
-			int nSegonsDia = 24*60*60;
-
-			nSegonsTotal += nSegonsDia;
-		}
+		nSegonsTotal += (dia-1)*24*60*60;
 
 		// Saltem hores
-		for (int iHora = 0; iHora<hora; ++iHora)
-		{
-			int nSegonsHora = 60*60;
-
-			nSegonsTotal += nSegonsHora;
-		}
+		nSegonsTotal += hora*60*60;
 
 		// Saltem minuts
-		for (int iMinut = 0; iMinut<minut; ++iMinut)
-		{
-			int nSegonsMinut = 60;
-
-			nSegonsTotal += nSegonsMinut;
-		}
+		nSegonsTotal += minut*60;
 		
 		//Saltem segons
-		
 		nSegonsTotal += segon;
 
 		return nSegonsTotal;
