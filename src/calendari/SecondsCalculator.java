@@ -37,7 +37,7 @@ public class SecondsCalculator
 		}
 
 		// Saltem hores
-		for (int iHora = 1; iHora<hora; ++iHora)
+		for (int iHora = 0; iHora<hora; ++iHora)
 		{
 			int nSegonsHora = 60*60;
 
