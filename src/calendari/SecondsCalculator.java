@@ -11,7 +11,7 @@ public class SecondsCalculator
 		{
 			int nDiesAny = 365;
 
-			if(IsAnyTraspas(any))
+			if(IsAnyTraspas(iAny))
 				nDiesAny = 366;
 
 			nSegonsAny = nDiesAny*24*60*60;
