@@ -90,11 +90,18 @@ class SecondsCalculatorTest
 
 			// Salts de anys i mesos sencers
 
-		// Saltem un mes exacte
+		// Saltem multiples d'un mes
 		assertEquals(calc.SegonsFins(1,2,1980,0,0,0),31*lSegonsPerDia);
 		assertEquals(calc.SegonsFins(1,3,1980,0,0,0),(31+29)*lSegonsPerDia);
 		assertEquals(calc.SegonsFins(1,4,1980,0,0,0),(31+29+31)*lSegonsPerDia);
-	
+
+		// Saltem multiples d'un any i d'un mes
+		assertEquals(calc.SegonsFins(1,2,1981,0,0,0),(366+31)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(1,3,1981,0,0,0),(366+31+28)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(1,2,1982,0,0,0),(366+365+31)*lSegonsPerDia);
+		assertEquals(calc.SegonsFins(1,3,1982,0,0,0),(366+365+31+28)*lSegonsPerDia);
+
+
 	}
 
 
