@@ -2,7 +2,24 @@ package calendari;
 
 public class SecondsCalculator
 {
-	public long SegonsFins(int dia, int mes, int any, int hora, int minut, int segon);
+	public long SegonsFins(int dia, int mes, int any, int hora, int minut, int segon)
+	{
+		long nSegonsTotal = 0;
+		long nSegonsAny = 0;
+		
+		for (int iAny = 1980; iAny<any; ++iAny)
+		{
+			int nDiesAny = 365;
+
+			if(IsAnyTraspas(any))
+				nDiesAny = 366;
+
+			nSegonsAny = nDiesAny*24*60*60;
+			nSegonsTotal += nSegonsAny;
+		}
+		
+		return nSegonsTotal;
+	}
 	
 	private boolean IsAnyTraspas(int any)
 	{
