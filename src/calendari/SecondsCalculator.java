@@ -28,6 +28,15 @@ public class SecondsCalculator
 			nSegonsTotal += nSegonsMes;
 		}
 
+		// Saltem dies
+		for (int iDia = 1; iDia<dia; ++iDia)
+		{
+			int nSegonsDia = 24*60*60;
+
+			nSegonsTotal += nSegonsDia;
+		}
+
+		
 		return nSegonsTotal;
 	}
 	
