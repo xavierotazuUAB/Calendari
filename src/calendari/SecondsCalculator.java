@@ -12,6 +12,11 @@ public class SecondsCalculator
 		if(any%4==0)
 		{
 			bTraspas = true;
+			
+			if(any%100==0)
+			{
+				bTraspas = false;
+			}
 		}
 		
 		return bTraspas;
