@@ -83,6 +83,8 @@ class SecondsCalculatorTest
 
 		// Saltem just un any, que en aquest cas és un any de traspàs (doncs comencem l'any 1980)
 		assertEquals(calc.SegonsFins(1,1,1981,0,0,0),366*lSegonsPerDia);
+		// Saltem dos anys, que en aquest cas és un any de traspàs i un que no ho és
+		assertEquals(calc.SegonsFins(1,1,1982,0,0,0),(366+365)*lSegonsPerDia);
 	}
 
 

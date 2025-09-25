@@ -7,6 +7,7 @@ public class SecondsCalculator
 		long nSegonsTotal = 0;
 		long nSegonsAny = 0;
 		
+		// Saltem anys sencers
 		for (int iAny = 1980; iAny<any; ++iAny)
 		{
 			int nDiesAny = 365;
