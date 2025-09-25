@@ -70,4 +70,20 @@ class SecondsCalculatorTest
 		assertTrue(calc.getIsAnyTraspas(2000));
 		assertTrue(calc.getIsAnyTraspas(2400));
 	}
+
+	@Test
+	void testSegonsFins()
+	{
+		long lSegonsPerMinut = 60;
+		long lSegonsPerHora = 60 * lSegonsPerMinut;
+		long lSegonsPerDia = 24 * lSegonsPerHora;
+
+		// Comprovem que els factors anteriors ens permeten calcular correctament els segons que hi ha en un any de traspas
+		assertEquals(366*lSegonsPerDia,31622400);
+
+		// Saltem just un any, que en aquest cas és un any de traspàs (doncs comencem l'any 1980)
+		assertEquals(calc.SegonsFins(1,1,1981,0,0,0),366*lSegonsPerDia);
+	}
+
+
 }
