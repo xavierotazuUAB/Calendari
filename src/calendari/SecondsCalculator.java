@@ -4,7 +4,15 @@ public class SecondsCalculator
 {
 	public long SegonsFins(int dia, int mes, int any, int hora, int minut, int segon);
 	
-	private boolean IsAnyTraspas(int any);
+	private boolean IsAnyTraspas(int any)
+	{
+		boolean bTraspas = false;
+		
+		if(any%4!=0)
+			bTraspas = true;
+		
+		return bTraspas
+	}
 	
 	private int DiesDelMes(int mes, int any)
 	{

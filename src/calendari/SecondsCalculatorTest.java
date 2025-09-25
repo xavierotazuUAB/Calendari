@@ -34,4 +34,14 @@ class SecondsCalculatorTest
 		assertEquals(calc.getDiesDelMes(12,2001), 31);
 	}
 
+	@Test
+	void testIsAnyTraspas()
+	{
+		// Casos més simples, basats simplement en si el mes és múltiple de 4 o no
+		assertTrue(calc.getIsAnyTraspas(1980));
+		assertFalse(calc.getIsAnyTraspas(1981));
+		assertFalse(calc.getIsAnyTraspas(1982));
+		assertFalse(calc.getIsAnyTraspas(1983));
+		assertTrue(calc.getIsAnyTraspas(1984));
+	}
 }
