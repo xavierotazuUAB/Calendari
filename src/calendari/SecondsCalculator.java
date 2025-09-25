@@ -51,6 +51,10 @@ public class SecondsCalculator
 
 			nSegonsTotal += nSegonsMinut;
 		}
+		
+		//Saltem segons
+		
+		nSegonsTotal += segon;
 
 		return nSegonsTotal;
 	}
