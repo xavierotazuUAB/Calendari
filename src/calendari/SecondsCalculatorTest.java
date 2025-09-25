@@ -78,6 +78,8 @@ class SecondsCalculatorTest
 		long lSegonsPerHora = 60 * lSegonsPerMinut;
 		long lSegonsPerDia = 24 * lSegonsPerHora;
 
+			// Salts d'anys sencers
+		
 		// Comprovem que els factors anteriors ens permeten calcular correctament els segons que hi ha en un any de traspas
 		assertEquals(366*lSegonsPerDia,31622400);
 
@@ -85,6 +87,12 @@ class SecondsCalculatorTest
 		assertEquals(calc.SegonsFins(1,1,1981,0,0,0),366*lSegonsPerDia);
 		// Saltem dos anys, que en aquest cas és un any de traspàs i un que no ho és
 		assertEquals(calc.SegonsFins(1,1,1982,0,0,0),(366+365)*lSegonsPerDia);
+
+			// Salts de anys i mesos sencers
+
+		// Saltem un mes exacte
+		assertEquals(calc.SegonsFins(1,2,1980,0,0,0),31*lSegonsPerDia);
+	
 	}
 
 
