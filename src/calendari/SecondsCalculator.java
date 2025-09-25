@@ -31,9 +31,20 @@ public class SecondsCalculator
 	
 	private int DiesDelMes(int mes, int any)
 	{
+		int n_dies = 0;
 		int dies[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+		if(mes!=2)
+			n_dies = dies[mes-1];
+		else
+		{
+			if(IsAnyTraspas(any))
+				n_dies = 29;
+			else
+				n_dies = 28;
+		}
 		
-		return dies[mes-1];
+		return n_dies;
 	}
 
 	
