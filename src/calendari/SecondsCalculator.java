@@ -9,7 +9,7 @@ public class SecondsCalculator
 		boolean bTraspas = false;
 		
 		// Multiple de 4
-		if(any%4!=0)
+		if(any%4==0)
 		{
 			bTraspas = true;
 		}
