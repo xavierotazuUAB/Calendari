@@ -19,6 +19,11 @@ public class SecondsCalculator
 			throw new IllegalArgumentException("Segon fora de rang");
 		}
 
+		if(mes <1 || mes>12)
+		{
+			throw new IllegalArgumentException("Mes fora de rang");
+		}
+
 		long nSegonsTotal = 0;
 		long nSegonsAny = 0;
 		
