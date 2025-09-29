@@ -24,6 +24,11 @@ public class SecondsCalculator
 			throw new IllegalArgumentException("Mes fora de rang");
 		}
 
+		if(dia<1 || dia>DiesDelMes(mes,any))
+		{
+			throw new IllegalArgumentException("Dia fora de rang");
+		}
+
 		long nSegonsTotal = 0;
 		long nSegonsAny = 0;
 		
