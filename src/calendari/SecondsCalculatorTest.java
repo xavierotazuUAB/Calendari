@@ -48,6 +48,11 @@ class SecondsCalculatorTest
 		assertEquals(calc.getDiesDelMes(2,2000), 29);
 		assertEquals(calc.getDiesDelMes(1,2000), 31);
 		assertEquals(calc.getDiesDelMes(4,2000), 30);
+
+		// Valors fora de rang
+		assertEquals(calc.getDiesDelMes(0,2000), -1);
+		assertEquals(calc.getDiesDelMes(13,2000), -1);
+	
 	}
 
 	@Test
