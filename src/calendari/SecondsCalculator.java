@@ -62,6 +62,9 @@ public class SecondsCalculator
 	
 	private int DiesDelMes(int mes, int any)
 	{
+		if(mes<1 || mes>12)
+			return -1;
+
 		int n_dies = 0;
 		int dies[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
