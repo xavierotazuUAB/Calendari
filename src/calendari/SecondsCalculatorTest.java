@@ -174,7 +174,23 @@ class SecondsCalculatorTest
 			assertTrue(false);			
 		}
 		catch (Exception e){}
-}
+
+	
+		// Mes fora de rang
+		try
+		{
+			calc.SegonsFins(1,0,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(1,13,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+	
+	}
 
 
 }
