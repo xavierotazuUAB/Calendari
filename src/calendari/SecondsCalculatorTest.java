@@ -189,7 +189,88 @@ class SecondsCalculatorTest
 			assertTrue(false);			
 		}
 		catch (Exception e){}
-	
+
+		// Dies fora de rang
+		// Mes de 31 dies
+		try
+		{
+			calc.SegonsFins(0,1,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(32,1,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		// Mes de 30 dies
+		try
+		{
+			calc.SegonsFins(0,4,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(31,1,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}		
+		// Mes de febrer anys de no traspas
+		try
+		{
+			calc.SegonsFins(0,2,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(29,2,1981,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		// Mes de febrer anys de traspas multiple de 4
+		try
+		{
+			calc.SegonsFins(0,2,1984,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(30,2,1984,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		// Mes de febrer anys de traspas multiple de 100
+		try
+		{
+			calc.SegonsFins(0,2,2100,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(29,2,2100,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		// Mes de febrer anys de traspas multiple de 400
+		try
+		{
+			calc.SegonsFins(0,2,2100,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(30,2,2000,0,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		
+		
 	}
 
 
