@@ -129,7 +129,38 @@ class SecondsCalculatorTest
 		// Copiem algun dels casos anteriors i afegim segons
 		assertEquals(calc.SegonsFins(31,3,1982,2,2,2),(366+365+31+28+30)*lSegonsPerDia + 2*lSegonsPerHora + 2*lSegonsPerMinut+ 2);
 	
-	}
+
+			// Control valors paràmetres d'entrada
+
+		// Segons fora de rang
+		try
+		{
+			calc.SegonsFins(1,1,1981,0,0,-1);
+			assertTrue(false);			
+			calc.SegonsFins(1,1,1981,0,0,60);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+
+		// Minuts fora de rang
+		try
+		{
+			calc.SegonsFins(1,1,1981,0,-1,0);
+			assertTrue(false);			
+			calc.SegonsFins(1,1,1981,0,60,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+
+		// Hores fora de rang
+		try
+		{
+			calc.SegonsFins(1,1,1981,0,-1,0);
+			calc.SegonsFins(1,1,1981,0,24,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+}
 
 
 }
