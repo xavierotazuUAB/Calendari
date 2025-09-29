@@ -213,7 +213,7 @@ class SecondsCalculatorTest
 		catch (Exception e){}
 		try
 		{
-			calc.SegonsFins(31,1,1981,0,0,0);
+			calc.SegonsFins(31,4,1981,0,0,0);
 			assertTrue(false);			
 		}
 		catch (Exception e){}		
