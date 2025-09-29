@@ -4,6 +4,21 @@ public class SecondsCalculator
 {
 	public long SegonsFins(int dia, int mes, int any, int hora, int minut, int segon)
 	{
+		if(hora <0 || hora>23)
+		{
+			throw new IllegalArgumentException("Hora fora de rang");
+		}
+
+		if(minut <0 || minut>59)
+		{
+			throw new IllegalArgumentException("Minut fora de rang");
+		}
+		
+		if(segon <0 || segon>59)
+		{
+			throw new IllegalArgumentException("Segon fora de rang");
+		}
+
 		long nSegonsTotal = 0;
 		long nSegonsAny = 0;
 		

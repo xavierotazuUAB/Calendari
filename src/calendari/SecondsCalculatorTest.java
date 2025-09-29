@@ -136,7 +136,12 @@ class SecondsCalculatorTest
 		try
 		{
 			calc.SegonsFins(1,1,1981,0,0,-1);
-			assertTrue(false);			
+			assertTrue(false);
+		}
+		catch (Exception e){}
+
+		try
+		{
 			calc.SegonsFins(1,1,1981,0,0,60);
 			assertTrue(false);			
 		}
@@ -147,6 +152,10 @@ class SecondsCalculatorTest
 		{
 			calc.SegonsFins(1,1,1981,0,-1,0);
 			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
 			calc.SegonsFins(1,1,1981,0,60,0);
 			assertTrue(false);			
 		}
@@ -155,8 +164,13 @@ class SecondsCalculatorTest
 		// Hores fora de rang
 		try
 		{
-			calc.SegonsFins(1,1,1981,0,-1,0);
-			calc.SegonsFins(1,1,1981,0,24,0);
+			calc.SegonsFins(1,1,1981,-1,0,0);
+			assertTrue(false);			
+		}
+		catch (Exception e){}
+		try
+		{
+			calc.SegonsFins(1,1,1981,24,0,0);
 			assertTrue(false);			
 		}
 		catch (Exception e){}
